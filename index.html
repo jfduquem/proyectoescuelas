@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página Inicial</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+	<style type="text/css">
+.formReg {
+
+width: 80%;
+	}
+
+.input-group-addon {
+	width: 10%
+}
+
+option {
+	text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding:0;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+	</style>
+
+</head>
+<body> 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+  	<ul class="nav navbar-nav navbar-right">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style="margin-top: 7px">Crear Cuenta</button>
+<a href="login.html" style="color: white;"><button type="button" class="btn btn-primary" id="iniciarss" style="margin-top: 7px">Iniciar Sesión</button></a>
+    </ul>
+
+<!--     <div class="navbar-header" >
+      <a class="navbar-brand" href="#" style="margin-left: 10px;">Nombre Institución</a>
+    </div> -->
+    
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Nuestro Liceo</a></li>
+      <li><a href="#">Circulares</a></li>
+      <li><a href="#">Orientación</a></li>
+      <li><a href="#">Galería Fotográfica</a></li>
+      <li><a href="#">Galería Videos</a></li>
+      <li><a href="#">Contáctenos</a></li>
+    </ul>
+     
+  </div>
+</nav>
+ 
+<!-- Button to open modal -->
+
+<!-- start modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog" >
+    <!-- Modal content-->
+    <div class="modal-content" style="border-color: #5CB85C">
+      <div class="modal-header" style="background-color: #5CB85C">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="modal-title" align="center" style="color: white;"><i class="fa fa-address-book"></i> REGISTRO</h2>
+      </div>
+      <div class="modal-body">
+		<div align="center">
+			<form id="formulario">
+				<div class="input-group formReg">
+					<span class="input-group-addon"><i class="fa fa-address-card"></i></span>
+					<input id="name" type="text" class="form-control" name="name" placeholder="Nombres" autocomplete="off" required>
+				</div><br>
+				<div class="input-group formReg">
+					<span class="input-group-addon"><i class="fa fa-address-card-o"></i></span>
+					<input id="lastName" type="text" class="form-control" name="lastName" placeholder="Apellidos" autocomplete="off" required>
+				</div><br>
+				<div class="input-group formReg">
+					<span class="input-group-addon"><i class="fa fa-calendar-check-o"></i></span>
+					<input id="age" type="number" class="form-control" name="age" placeholder="Edad" autocomplete="off" required>
+				</div><br>
+				<div class="input-group formReg">
+					<span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+					<input id="email" type="email" class="form-control" name="email" placeholder="Email" autocomplete="off" required>
+				</div><br>
+				<div class="input-group formReg">
+					<span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+					<select id="curso" style="width: 100%; height: 30px;" required>
+					<option disabled selected hidden><span style="color: blue">Curso</span></option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+				</div><br>
+				<div class="input-group formReg">
+					<span class="input-group-addon"><i class="fa fa-user"></i></span>
+					<input id="userN" type="text" class="form-control" name="userN" placeholder="Usuario" autocomplete="off" required>
+				</div><br>
+				<div class="input-group formReg">
+					<span class="input-group-addon"><i class="fa fa-key"></i></span>
+					<input id="password" type="password" class="form-control" name="password" placeholder="Contraseña" autocomplete="off" required>
+				</div><br>
+				<div class="input-group formReg">
+					<span class="input-group-addon"><i class="fa fa-key"></i></span>
+					<input id="confirmPassword" type="password" class="form-control" name="confirmPassword" placeholder="Confirmar" autocomplete="off" required>
+				</div><br>
+
+				<div class="modal-foote formRegr" style="border-color: #337AB7">
+					<button class="btn btn-success">Registrarme</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal" id="closemdl">Cancelar</button>
+					<input type="reset" name="" style="display: none;" id="reset">
+				</div><br>
+				
+			</form>
+		</div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+
+	// $('#curso').select2()
+
+	$('#formulario').submit(function(e){
+		e.preventDefault();
+		Registrarme()
+	})
+
+	function Registrarme(){
+
+	if ($('#curso').val() != null) {	
+
+	if ($('#password').val() == $('#confirmPassword').val()) {
+		
+		var v1 = $('#name').val();
+		var v2 = $('#lastName').val();
+		var v3 = $('#age').val();
+		var v4 = $('#email').val();
+		var v5 = $('#curso').val();
+		var v6 = $('#userN').val();
+		var v7 = $('#password').val();
+		var v8 = $('#confirmPassword').val();
+
+
+		var jsondatos = [{'name':v1, 'lastName':v2, 'age':v3, 'email':v4, 'curso':v5, 'userN':v6, 'password':v7, 'confirmPassword':v8}]
+
+			swal({
+			title: "¡Perfecto!",
+			text: "Ahora inicia sesión",
+			icon: "success",
+			buttons: true,
+			dangerMode: false,
+			})
+			.then((willDelete) => {
+			if (willDelete) {
+			$('#iniciarss').click()
+			} else {
+			$('#closemdl').click()
+			$('#reset').click()
+			}
+			});
+		
+		console.log(jsondatos)
+	
+	}
+
+	else{
+
+		toastr.error('Las contraseñas NO coinciden.');
+		
+	}}
+
+	else{
+
+		toastr.error('Debe elegir Curso.');
+
+	}
+	}
+
+
+
+</script>	
+
+</body>
+</html>
