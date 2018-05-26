@@ -59,6 +59,7 @@ body {
     position: absolute;
     right: 0;
     top: 0;
+
   }
   .topnav.responsive a {
     float: none;
@@ -108,23 +109,29 @@ li a:hover {
 
 </head>
 <body>
-
+<div>
 	<div class="topnav" id="myTopnav">
-		<a href="#">Inicio</a>
+		<a href="#" class="active">Inicio</a>
 		<a href="#">Nuestro Liceo</a>
 		<a href="#">Circulares</a>
 		<a href="#">Orientación</a>
 		<a href="#">Galería Fotográfica</a>
 		<a href="#">Galería Videos</a>
-		<a href="#">Contáctenos</a>
-		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style="margin-top: 7px">Crear Cuenta</button>
-		<button type="button" class="btn btn-primary" id="iniciarss" style="margin-top: 7px" onclick="openlogin()">Iniciar Sesión</button>
-		 
+		<a href="#">Contáctenos</a> 
   		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    	<i class="fa fa-bars"></i>
+    		<i class="fa fa-bars"></i>
   		</a>
-</div>
+  		<div align="right" style="margin-right: 10px; margin-top: 7px" >
+			<button class="btn btn-success"  data-toggle="modal" data-target="#myModal">Crear Cuenta</button>
+  			<button class="btn btn-primary" onclick="openlogin()" id="iniciarss">Inicias Sesión</button>
+  	
+		</div>
+	</div>
 
+	
+
+
+</div>
 <!-- start modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog" >
